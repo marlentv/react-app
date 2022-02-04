@@ -22,7 +22,7 @@ function AppUI() {
     setOpenModal,
   } = React.useContext(TodoContext);
 
-  const lStorage = JSON.parse(localStorage.getItem('TODOS_V1')).length;
+  // const lStorage = JSON.parse(localStorage.getItem('TODOS_V1')).length;
   return (
     <React.Fragment>
       <TodoCounter />
@@ -30,8 +30,7 @@ function AppUI() {
 
       <TodoList>
         {error && <TodosError error={error} />}
-        {loading &&
-          new Array(lStorage).fill(1).map((i) => <TodosLoading key={i} />)}
+        {/* {loading && new Array(lStorage).fill(1).map((i) => <TodosLoading key={i} />)} */}
         {!loading && !searchedTodos.length && <EmptyTodos />}
 
         {searchedTodos.map((todo) => (
