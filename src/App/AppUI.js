@@ -10,7 +10,6 @@ import { TodosError } from '../TodosError';
 import { TodosLoading } from '../TodosLoading';
 import { EmptyTodos } from '../EmptyTodos';
 import { Modal } from '../Modal';
-import { useLocalStorage } from '../TodoContext/useLocalStorage';
 
 function AppUI() {
   const {
