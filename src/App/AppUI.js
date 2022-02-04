@@ -30,7 +30,10 @@ function AppUI() {
 
       <TodoList>
         {error && <TodosError error={error} />}
-        {/* {loading && new Array(lStorage).fill(1).map((i) => <TodosLoading key={i} />)} */}
+        {loading &&
+          new Array(JSON.parse(localStorage.getItem('TODOS_V1')).length)
+            .fill(1)
+            .map((i) => <TodosLoading key={i} />)}
         {!loading && !searchedTodos.length && <EmptyTodos />}
 
         {searchedTodos.map((todo) => (
